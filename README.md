@@ -34,9 +34,23 @@ biblioteca = Biblioteca.new
 <details>
   <summary> Hash </summary> </br>
   Com o Hash é possível separar os itens por categorias, por meio da adição de atributos.Para acessar cada valor, precisamos passar um objeto que representa a chave identificadora, em vez de passar um inteiro que represente o índice (como acontece no caso do array). Para inicializar a hash livros faremos:
+  
 `livros = {}`
   
+   A chave do Hash é um identificador único e, geralmente, é um símbolo (:teste). Já o valor é qualquer tipo de objeto ruby. Para acessar um valor dentro de um Hash, basta invocar o método [:chave], passando a chave identificadora do container.
    <br />
+   Existe também o operador ||=, que executa o mesmo comportamento do unless, ou seja, só vai incluir um elemento no hash se o valor daquele índice for nil. Senão, vai manter o valor que já está lá, mas não vai retornar nenhum erro.
+   <br />
+   O método set precisa ser importado (arquivo set.rb, que já vem junto com o interpretador). A classe Set tem um método initialize que recebe um array com os elementos que formarão a coleção, e desses elementos ele só guarda os que não são repetidos. Exemplo:
+   
+```rb
+require 'set'
+numero_sem_repeticao = Set.new [1, 2, 2, 3, 2, 1]
+for numero in numero_sem_repeticao do
+  p numero
+end
+```
+
 </details>
 
 ## Programação Funcional
